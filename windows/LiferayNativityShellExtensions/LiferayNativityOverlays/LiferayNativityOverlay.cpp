@@ -86,7 +86,7 @@ IFACEMETHODIMP LiferayNativityOverlay::GetPriority(int *pPriority)
  IFACEMETHODIMP LiferayNativityOverlay::IsMemberOf(PCWSTR pwszPath, DWORD dwAttrib)
 {
 	
-	/*if(!_IsOverlaysEnabled())
+	if(!_IsOverlaysEnabled())
 	{
 		return MAKE_HRESULT(S_FALSE, 0, 0);
 	}
@@ -94,7 +94,7 @@ IFACEMETHODIMP LiferayNativityOverlay::GetPriority(int *pPriority)
 	if(!_IsMonitoredFile(pwszPath))
 	{
 		return MAKE_HRESULT(S_FALSE, 0, 0);
-	}*/
+	}
 	
 	if(!_IsMonitoredFileState(pwszPath))
 	{
