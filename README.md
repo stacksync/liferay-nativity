@@ -7,7 +7,7 @@ These are the additional steps to compìle the project:
     - C:/Windows/Microsoft.NET/Framework64/v4.0.30319
     - %ANT_HOME%\bin
   - Create a sysvar called ANT_HOME with the path to your Ant installation.
-  - Add use the following build.xml script:
+  - Add the following code to the build.xml script:
     ```sh
     <?xml version="1.0"?>
     <project name="liferay-nativity-java" basedir="." default="compile">
@@ -47,7 +47,7 @@ These are the additional steps to compìle the project:
     
     	<target name="build-jar" depends="compile">
     		<delete dir="${java.dir}/dist" />
-    
+  
     		<jar destfile="${project.dir}/dist/liferay-nativity-${package.version}.jar" filesetmanifest="mergewithoutmain">
     			<fileset dir="${java.dir}/classes" />
     			<zipgroupfileset dir="${java.dir}/lib" excludes="META-INF/*.SF" includes="*.jar" />
@@ -316,7 +316,9 @@ These are the additional steps to compìle the project:
     	</target>
     </project>
         ```
-    -Configure your build.properties, for example like this:
+    
+
+  -Configure your build.properties, for example like this:
 
        
         ##
