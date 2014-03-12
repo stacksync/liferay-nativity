@@ -315,7 +315,7 @@ These are the additional steps to compìle the project:
     		<delete file="ServiceBuilder.temp" />
     	</target>
     </project>
-        ```
+
     
 
   -Configure your build.properties, for example like this:
@@ -324,7 +324,7 @@ These are the additional steps to compìle the project:
         ##
         ## Nativity
         ##
-            nativity.dir=C:/Users/adiaz/Desktop/liferay-nativity-master
+            nativity.dir=Your liferay path here
         	nativity.version=1.0.1
         	ms.sdk.7.1.dir=C:/Program Files/Microsoft SDKs/Windows/v7.1
         	framework.dir=C:/Windows/Microsoft.NET/Framework64/v4.0.30319
@@ -334,17 +334,17 @@ These are the additional steps to compìle the project:
         	overlay.name=LiferayNativityOKOverlay
         	overlay.guid={0DD5B4B0-25AF-4e09-A46B-9F274F3D7001}
         	overlay.id=1
-        	overlay.path=C:/Users/adiaz/Desktop/liferay-nativity-master/windows/LiferayNativityShellExtensions/LiferayNativityOverlays/ok_overlay.ico
+        	overlay.path=Your liferay path here/windows/LiferayNativityShellExtensions/LiferayNativityOverlays/ok_overlay.ico
         
         	overlay.name.syncing=LiferayNativitySyncingOverlay
         	overlay.guid.syncing={0DD5B4B0-25AF-4e09-A46B-9F274F3D7002}
         	overlay.id.syncing=2
-        	overlay.path.syncing=C:/Users/adiaz/Desktop/liferay-nativity-master/windows/LiferayNativityShellExtensions/LiferayNativityOverlays/syncing_overlay.ico
+        	overlay.path.syncing=Your liferay path here/windows/LiferayNativityShellExtensions/LiferayNativityOverlays/syncing_overlay.ico
         
         	overlay.name.error=LiferayNativityErrorOverlay
         	overlay.guid.error={0DD5B4B0-25AF-4e09-A46B-9F274F3D7003}
         	overlay.id.error=3
-        	overlay.path.error=C:/Users/adiaz/Desktop/liferay-nativity-master/windows/LiferayNativityShellExtensions/LiferayNativityOverlays/error_overlay.ico
+        	overlay.path.error=Your liferay path here/windows/LiferayNativityShellExtensions/LiferayNativityOverlays/error_overlay.ico
     
 
 Little build-compile guide
