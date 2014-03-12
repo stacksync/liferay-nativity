@@ -318,7 +318,7 @@ These are the additional steps to compìle the project:
 
     
 
-  -Configure your build.properties, for example like this:
+-Configure your build.properties, for example like this:
 
        
         ##
