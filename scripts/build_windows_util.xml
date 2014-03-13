@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<project>
+    <property file="../build.properties"/>
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+
+    <ant dir="${nativity.dir}" antfile="build.xml" target="build-windows-util" inheritAll="false">
+      <property name="nativity.dir" value="${nativity.dir}" />
+      <property name="target.os" value="windows" />
+      <property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
+      <property name="framework.dir" value="${framework.dir}" />
+    </ant>
+
+</project>

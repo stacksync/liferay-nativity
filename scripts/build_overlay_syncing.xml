@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<project>
+    <property file="../build.properties"/>
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+
+    <ant dir="${nativity.dir}" target="build-windows-overlays" inheritAll="false">
+      <property name="nativity.dir" value="${nativity.dir}" />
+      <property name="dist.dir" value="${project.dir}/dist" />
+      <property name="target.os" value="windows" />
+      <property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
+      <property name="framework.dir" value="${framework.dir}" />
+
+      <property name="overlay.name" value="${overlay.name.syncing}" />
+      <property name="overlay.guid" value="${overlay.guid.syncing}" />
+      <property name="overlay.id" value="${overlay.id.syncing}" />
+      <property name="overlay.path" value="${overlay.path.syncing}" />
+    </ant>
+</project>

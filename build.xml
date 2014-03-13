@@ -2,12 +2,6 @@
 
 <project name="liferay-nativity-java" basedir="." default="compile">
 
-	<taskdef resource="net/sf/antcontrib/antlib.xml">
-		<classpath>
-			<fileset dir="${basedir}/antlib"/>
-		</classpath>
-	</taskdef>
-	
 	<property name="project.dir" value="." />
 	<property name="project.tmp.dir" value="${project.dir}/tmp" />
 
@@ -49,10 +43,6 @@
 	</target>
 
 	<target name="build-windows-util" depends="compile">
-		<property name="nativity.dir" value="${nativity.dir}" />
-		<property name="target.os" value="windows" />
-		<property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
-		<property name="framework.dir" value="${framework.dir}" />
         <if>
             <not>
                 <equals arg1="${target.os}" arg2="windows" />
@@ -89,10 +79,6 @@
     </target>
 
     <target name="build-windows-native-util" depends="compile">
-		<property name="nativity.dir" value="${nativity.dir}" />
-		<property name="target.os" value="windows" />
-		<property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
-		<property name="framework.dir" value="${framework.dir}" />
         <if>
             <not>
                 <equals arg1="${target.os}" arg2="windows" />
@@ -140,12 +126,6 @@
     </target>
 
 	<target name="build-windows-menus" depends="compile">
-		<property name="nativity.dir" value="${nativity.dir}" />
-		<property name="target.os" value="windows" />
-		<property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
-		<property name="framework.dir" value="${framework.dir}" />
-		<property name="context.menu.guid" value="${context.menu.guid}" />
-		
         <if>
             <not>
                 <equals arg1="${target.os}" arg2="windows" />
@@ -194,12 +174,6 @@
     </target>
 
 	<target name="build-windows-overlays" depends="compile">
-		  <property name="nativity.dir" value="${nativity.dir}" />
-		  <property name="dist.dir" value="${project.dir}/dist" />
-		  <property name="target.os" value="windows" />
-		  <property name="ms.sdk.7.1.dir" value="${ms.sdk.7.1.dir}" />
-		  <property name="framework.dir" value="${framework.dir}" />
-
         <if>
             <not>
                 <equals arg1="${target.os}" arg2="windows" />
@@ -212,7 +186,7 @@
         </if>
 
 		<mkdir dir="${project.dir}/dist/" />
-		
+
 	    <copy
 		    file="${overlay.path}"
 	        toFile="${nativity.dir}/windows/LiferayNativityShellExtensions/LiferayNativityOverlays/overlay.ico"
