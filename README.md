@@ -145,6 +145,8 @@ For Windows Nativity makes use of both a JNI interface as well as Windows Shell 
 
 * [Microsoft SDK 7.1 and .NET Framework 4](http://www.microsoft.com/en-us/download/details.aspx?id=8442)
 * [Ant](https://ant.apache.org/manual/install.html)
+	* Ant library: [GWT](http://www.gwtproject.org)
+	* Ant library: [Ant-Contrib](http://ant-contrib.sourceforge.net/)
 
 
 Once these dependencies are installed, add their binary folders to the PATH environment variable.
@@ -154,7 +156,7 @@ Once these dependencies are installed, add their binary folders to the PATH envi
     C:\Windows\Microsoft.NET\Framework\v4.0.30319
     C:\ant\bin
     
-
+Then, place the Ant libraries into the `lib` folder (e.g. `C:\ant\lib`).
 
 ### JNI Interface
 The JNI interface allows the Java side of nativity to interact with the native side of nativity.  It only provides the ability to set a folder to a system folder.  In windows if you want to set a folder icon through an desktop.ini file you must set the folder to be a system folder. So Nativity provides this functionality even though it is available in java 1.7, however nativity also provides it do older versions of java can be supported.
