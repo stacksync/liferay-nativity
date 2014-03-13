@@ -14,6 +14,7 @@
 			- [LiferayNativityInjector](#liferaynativityinjector)
 			- [LiferayNativityFinder](#liferaynativityfinder)
 	- [Windows](#windows)
+		- [Dependencies](#dependencies)
 		- [JNI Interface](#jni-interface)
 		- [Shell Extensions](#shell-extensions)
 			- [Build Properties](#build-properties)
@@ -23,6 +24,7 @@
 			- [Context Menu DLL](#context-menu-dll)
 			- [Icon Overlay DLL](#icon-overlay-dll)
 				- [Sample](#sample-1)
+		- [Errors](#errors)
 	- [Linux](#linux)
 		- [Build](#build-1)
 			- [Deployment](#deployment-1)
@@ -138,6 +140,22 @@ For Windows Nativity makes use of both a JNI interface as well as Windows Shell 
 * 1 for JNI Interface dll
 * 1 Utility DLL shared by the context menu shell extension and the icon overlay extension.
 
+
+### Dependencies
+
+* [Microsoft SDK 7.1 and .NET Framework 4](http://www.microsoft.com/en-us/download/details.aspx?id=8442)
+* [Ant](https://ant.apache.org/manual/install.html)
+
+
+Once these dependencies are installed, add their binary folders to the PATH environment variable.
+
+##### Example
+
+    C:\Windows\Microsoft.NET\Framework\v4.0.30319
+    C:\ant\bin
+    
+
+
 ### JNI Interface
 The JNI interface allows the Java side of nativity to interact with the native side of nativity.  It only provides the ability to set a folder to a system folder.  In windows if you want to set a folder icon through an desktop.ini file you must set the folder to be a system folder. So Nativity provides this functionality even though it is available in java 1.7, however nativity also provides it do older versions of java can be supported.
 
@@ -199,7 +217,7 @@ In your ant properties file you need to add the following properties.
 
 ### Ant Scripts
 
-In the `scripts` folder you can find the different Ant tasks needed to create the DLL's. Run `ant -f <script_name>.xml` for each script to generate the DLL's.
+In the `scripts` folder you can find the different Ant tasks needed to create the DLL's. Run `ant -f scripts/<script_name>.xml` for each script to generate the DLL's.
 
 #### Windows Util DLL
 
@@ -253,6 +271,14 @@ One Icon Overlay DLL must be built for each Icon Overlay.
       <property name="overlay.id" value="${overlay.id.syncing}" />
       <property name="overlay.path" value="${overlay.path.syncing}" />
     </ant>
+
+### Errors
+
+If you get a `Class not found: org.eclipse.jdt.core.JDTCompilerAdapter` error while running the scripts, download the GWT library from [http://www.gwtproject.org](http://www.gwtproject.org) and extract the `gwt-dev.jar` file into the `lib` folder in your Ant installation (e.g. `C:\ant\lib`).
+
+If you get a `'MSBuild.exe' is not recognized as an internal or external command` error while compiling the DLL's, be sure you have the Microsoft SDK 7.1 and .NET Framework 4 installed (see [Dependencies](#dependencies)) and you included the binary folder in the PATH system variable.
+
+
 
 ## Linux
 
