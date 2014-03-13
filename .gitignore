@@ -11,6 +11,8 @@ java/classes
 java/dist
 java/.settings
 
+*.sdf
+
 windows/LiferayNativityShellExtensions/ipch
 windows/LiferayNativityShellExtensions/*.opensdf
 windows/LiferayNativityShellExtensions/Release
